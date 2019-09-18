@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href=index.css>
+    <title>Chess clock</title>
+</head>
+<body>
+    <div id = "flat" class = "clock">
+        <div class = "rule">
+            <ul>
+                <li v-for="item in list">{{item}}</li>
+            </ul>
+        </div>
+        <div class = "Player1" v-bind:class = "{active:primaryPlayer == 'Player1'}">
+            <p>プレイヤー1<br />持ち時間 : {{timePlayer1 | time}}</p>
+        </div>
+        <div class = "Player2" v-bind:class = "{active:primaryPlayer == 'Player2'}">
+            <p>プレイヤー2<br />持ち時間 : {{timePlayer2 | time}}</p>
+        </div>
+        <div class = "cotrole-button">
+            <!--総手数を表示する-->
+            <p>{{count}}手目です。</p>
+            <button v-on:click = "pressTimer() ; increment()">Push</button>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
