@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>REVERSI</title>
+</head>
+<body>
+    <div id="app">
+        <!--オセロ盤-->
+        <table>
+            <tr v-for="y in size">
+                <td v-for="x in size">
+                    <stone: type="getStone(x,y)"></stone>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+    <script src="main.js"></script>
+</body>
+</html>
