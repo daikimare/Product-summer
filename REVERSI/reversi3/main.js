@@ -26,9 +26,21 @@ new Vue({
         stone: []
     },
     methods:{
+        initStone(){
+            var stone=[];
+            var size=this.size;
 
+            for(var x=0;x<size;x++){
+                var stoneLine=[];
+                for(var y=0;y<size;y++){
+                    stoneLine.push=(0); //0は空白
+                }
+                stones.push(stoneLine);
+            }
+            this.stones=stones;
+        }
     },
-    created:{
-
-    },
+    created(){
+        this.initStone();
+    }
 });
