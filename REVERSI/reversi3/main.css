@@ -1,0 +1,13 @@
+table{
+    border-collapse: collapse;
+}
+
+td{
+    background: #f0f0f0;
+    border: 1px solid #999;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    vertical-align: middle;
+}
+
